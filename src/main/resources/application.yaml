@@ -8,8 +8,17 @@ spring:
     password:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
     open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
 logging:
   level:
     org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace

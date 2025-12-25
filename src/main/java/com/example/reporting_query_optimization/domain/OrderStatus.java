@@ -1,4 +1,4 @@
-package com.example.reporting_query_optimization.domain.order;
+package com.example.reporting_query_optimization.domain;
 
 public enum OrderStatus {
     CREATED,

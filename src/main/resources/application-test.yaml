@@ -1,8 +1,13 @@
 spring:
+  flyway:
+    enabled: true
   jpa:
     properties:
       hibernate:
         format_sql: false
+        generate_statistics: true
+
 logging:
   level:
     org.hibernate.SQL: off
+    org.hibernate.orm.jdbc.bind: off
